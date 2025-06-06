@@ -1,0 +1,26 @@
+---
+## Explanation of the Weighted Scoring System
+
+In this analysis, we aimed to identify the individuals most responsible for contributing to the "worst" movies based on IMDb ratings, factoring in not just frequency but also the influence of their role and the popularity of each movie.
+
+### How the Score is Calculated:
+- **Role Weights:** Each role involved in movie production is assigned a weight to reflect its impact on the final product.
+  - Producers: 4 points (highest influence)
+  - Directors: 3 points
+  - Writers: 2 points
+  - Actors/Actresses: 1 point (lower individual influence)
+
+- **Frequency:** The number of times an individual appears in the credits for the worst 200 movies.
+
+- **Popularity Weighting:** The number of votes (`numVotes`) each movie has received on IMDb is included to account for the movie’s reach or audience size.
+
+### Formula:
+For each person-role combination, the **weighted score** is computed as:
+
+> **Score = Appearances × Role Weight × Number of Votes**
+
+This formula balances the individual's contribution frequency with the significance of their role and the size of the audience affected.
+
+The final output ranks individuals by their total weighted score, helping us spotlight the key contributors who recurrently appear in poorly rated movies with large audiences.
+
+---
