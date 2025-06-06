@@ -6,7 +6,7 @@
 
 Due to GitHub file size limitations, this repository includes sample versions of the IMDb datasets.
 
-- ✅ Full IMDb datasets are stored in Google Drive: [Link to Drive Folder](https://drive.google.com/your-folder-link)
+- ✅ Full IMDb datasets are stored in Google Drive: [Link to Drive Folder]([https://drive.google.com/your-folder-link](https://drive.google.com/drive/folders/1cPmar2bYS2sHzuSRAQTB2wdgpFWywEH5?usp=sharing))
 - 📦 Sample data (~1,000 rows each) are available in `/data/sample/` for demonstration and development.
 
 | File                   | Description                          |
