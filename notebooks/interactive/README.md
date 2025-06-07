@@ -20,17 +20,6 @@ To get the full interactive experience:
 
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Data-Matt0/imdb-lowest-rated-analysis/blob/main/notebooks/top_culprits/top_culprits_interactive.ipynb)
 
----
-
-## Alternative: Static view on GitHub
-
-If you want a non-interactive static preview, check the exported HTML files in this repository (if available).
-
----
-
-## Questions or issues?
-
-Please open an issue or contact the repository maintainer.
 
 ---
 
