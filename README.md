@@ -46,7 +46,7 @@ Explore individual contributors dynamically:
 
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Data-Matt0/imdb-lowest-rated-analysis/blob/main/notebooks/interactive/top_culprits_interactive.ipynb)
 
-> ℹ️ Note: GitHub does not render widget-enabled notebooks. Use the button above to open the notebook in Colab for full interactivity.
+> ℹ️ Note: GitHub does not render widget-enabled notebooks. Use the button above to open the notebook in Colab and run for full interactivity.
 
 ---
 
@@ -79,4 +79,4 @@ Thanks to IMDb for making its data openly available.
 
 ---
 
-*Built by [Your Name](https://github.com/Data-Matt0) – feedback and PRs welcome!*
+*Built by [Data-Matt0](https://github.com/Data-Matt0) – feedback and PRs welcome!*
