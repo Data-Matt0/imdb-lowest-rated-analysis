@@ -29,7 +29,4 @@ These are the canonical inputs for the SQLite database and all subsequent analys
 
 ➡️ See [`filtered_data/README.md`](./filtered_data/README.md) for details.
 
----
-
-## 🔄 Data Workflow Summary
 
