@@ -1,27 +1,41 @@
-## 📈 Notebook: Top Culprits - Basic Analysis of Worst-Rated IMDB Films
+# Top Culprits – Frequency & Impact
 
-This notebook performs exploratory data analysis (EDA) to identify people who are most frequently associated with IMDb’s 200 lowest-rated movies. It offers static, role-based aggregation that complements the more dynamic, interactive exploration in the `top_culprits_interactive` notebook.
+This folder contains two foundational analyses that support the broader investigation into contributors associated with IMDb’s lowest-rated films. These notebooks help surface patterns in **contributor frequency** and **impact**, setting the stage for deeper exploration in the interactive component of the project.
 
-### 🔍 Key Questions Explored:
-- Who are the most frequently involved people in the worst-rated movies?
-- How do different roles (e.g., actors vs. directors) show up across this list?
-- Which individuals have the most appearances, and in what capacities?
+---
 
-### 🧮 Data Pipeline Summary:
-- Pulls in pre-processed CSVs: `merged_movies.csv`, `principals_filtered.csv`, and `names_filtered.csv`.
-- Filters to the 200 lowest-rated movies using average rating (with a vote count tie-breaker).
-- Joins names with principals to match individuals to roles in each film.
+## 📓 Notebooks
 
-### 📊 Core Outputs:
-1. **Bar chart of most frequent contributors** across all roles (e.g., actors, producers, directors).
-2. **Bar chart broken down by role**, showing which individuals appear most often as actors, writers, etc.
-3. **Tabular summary** of individuals with their total appearances and associated roles.
+### 1. `top_50_frequent_people.ipynb`
 
-### 🧩 How This Fits Into the Overall Project
+This notebook identifies the **50 most frequently occurring individuals** across the 200 worst-rated IMDb titles. These are people—regardless of role—who appear in the credits of multiple low-rated projects. At the end of the notebook, a **horizontal bar chart** visualizes the number of appearances for each of these contributors.
 
-This notebook establishes the **baseline frequency-based perspective** on the most common contributors to low-rated films. It:
-- Provides a **non-interactive but visually clear snapshot** of recurring names and roles.
-- Helps identify potential patterns (e.g., which roles tend to repeat most often).
-- Acts as a precursor to the **interactive weighted analysis**, where role importance and vote volume are introduced to refine the insights.
+🔹 **Note:** This chart is embedded directly within the notebook and is not saved as a separate image file.
 
-📎 If you're looking for a quick, visual summary of "frequent flyers" in bad films—without needing widgets or dropdowns—this notebook is the place to start.
+The frequency analysis is helpful for:
+- Highlighting repeat contributors
+- Spotting potential patterns of creative involvement in low-performing content
+- Informing downstream analyses (e.g., which contributors to evaluate more deeply)
+
+---
+
+### 2. `top_culprits_weighted.ipynb`
+
+This notebook introduces a **weighted scoring system** that accounts for:
+- 📌 Role importance (e.g., producer > actor)
+- 🔁 Frequency of appearances
+- 📣 Audience exposure (number of IMDb votes)
+
+The resulting **weighted score** reflects the estimated creative or reputational impact of each contributor on the project’s perceived quality.
+
+This data feeds directly into two other project components:
+- 📊 A static lollipop chart in `visuals/top_culprits_lollipop_chart.png`
+- ⚙️ A dynamic exploration experience in `notebooks/interactive/top_culprits_interactive(1).ipynb`
+
+---
+
+## 🧠 Context Within the Project
+
+These two notebooks together provide a **foundational understanding** of who the most consistently involved contributors are — by raw count and by influence. They serve as a bridge between the cleaned datasets and the more advanced visual and interactive analyses, allowing hiring managers and data professionals to understand the **logic behind the scoring system** and the insights that follow.
+
+---
