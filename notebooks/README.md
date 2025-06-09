@@ -46,11 +46,8 @@ This folder contains all Jupyter notebooks used throughout the IMDb Lowest Rated
 ## 📂 `interactive/`
 
 ### 6. `top_culprits_interactive.ipynb`
-**Purpose:** Offers an interactive version of the culprits analysis using sliders to filter by role, movie count, or score.
+**Purpose:** Offers an interactive feature where users can select a **Top Culprit** for further inspection. A drop-down feature provides more details onto what project most contributed to the Top Culprit's ranking. 
 
 ➡️ Adds an exploratory, user-driven element to the project — ideal for stakeholder demos or app integration.
 
 ---
-
-## 🔄 Workflow Summary
-
