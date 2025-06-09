@@ -1,19 +1,18 @@
 # Visuals – Top Culprits Lollipop Chart
 
-This folder contains visual outputs that support the core findings of the **IMDb Lowest Rated Analysis** project. The primary image, `top_culprits_lollipop_chart.png`, presents a concise visual summary of key contributors most frequently associated with IMDb’s lowest-rated films.
+This folder contains visual outputs that support the findings of the **IMDb Lowest Rated Analysis** project. The primary visual, `top_culprits_lollipop_chart.png`, presents a ranked view of contributors with a high presence in IMDb’s lowest-rated films, based on a custom scoring system.
 
 ---
 
 ## 📊 Chart Overview: `top_culprits_lollipop_chart.png`
 
-This **lollipop chart** highlights individuals who appear repeatedly in the **200 lowest-rated IMDb films**, ranked by a custom **weighted score**. Each horizontal line represents one contributor, ending in a red circular marker indicating their **overall weighted impact**.
+This **lollipop chart** highlights contributors who appear frequently in the **200 lowest-rated IMDb movies**. Each red marker represents a contributor’s **weighted score**, calculated by combining:
 
-The weighted score accounts for three key factors:
-- 📌 **Role importance** (e.g., producers have more creative control than actors)
-- 🔁 **Frequency of appearances** across the worst-rated titles
-- 📣 **Audience exposure**, measured by number of user votes
+- 🔁 **Frequency** of appearances across the lowest-rated films  
+- 📌 **Role impact**, where certain roles carry more influence  
+- 📣 **Audience exposure**, measured by the number of user votes
 
-These factors are combined into a single score using the following role weights:
+**Role weights** used in the calculation:
 
 | Role      | Weight |
 |-----------|--------|
@@ -23,38 +22,46 @@ These factors are combined into a single score using the following role weights:
 | Actor     | 1      |
 | Actress   | 1      |
 
+Higher scores indicate greater overall impact on low-rated content, with producers and directors having a stronger influence than actors.
+
 ---
 
 ## 📁 Data Sources
 
-The chart is generated from pre-processed datasets located in `data/filtered_data/`:
+The chart is built using filtered datasets originally sourced from IMDb and processed into the following CSVs:
 
-- `merged_movies.csv`: Ratings, titles, and metadata for IMDb's lowest-rated films  
-- `principals_filtered.csv`: Cast and crew information per film  
-- `names_filtered.csv`: Contributor name mappings
+- `merged_movies.csv`  
+- `principals_filtered.csv`  
+- `names_filtered.csv`
 
-These files are loaded into an SQLite database to construct a temporary view of the **worst 200 films**, ordered by lowest average rating and highest number of votes. Contributor impact is then calculated based on their role and the visibility of the films they worked on.
+To meet GitHub file size limitations, **sample versions** of these datasets are stored in `data/filtered_data/` and `data/sample_datasets/` on this repo.
+
+🔗 **For full datasets (recommended for replication or deeper analysis):**  
+All filtered data files used in this chart are publicly available here:  
+👉 [Google Drive – Full Filtered Data Folder](https://drive.google.com/drive/folders/1zedc4W0_0Jw1b3VrmJQb2jtTE7NSDKHP?usp=sharing)
 
 ---
 
 ## 🧠 Purpose & Significance
 
-This visualization serves as an **introductory lens** into the dataset, helping to identify:
-- Individuals who appear disproportionately often in poorly rated films
-- Potential patterns of recurring low-quality contributions
-- Roles that exert the greatest influence over film quality
+This chart helps identify:
 
-While the chart focuses on high-frequency, high-impact individuals, a more nuanced view is provided in the **interactive dropdown notebook** (`notebooks/interactive/top_culprits_interactive.ipynb`). That notebook explores **contributors with high weighted impact who may not appear frequently**, allowing for deeper insight into the creative dynamics behind these films.
+- Contributors who consistently appear in low-rated content
+- Patterns of recurring influence across poorly received titles
+- Potential accountability tied to creative or production roles
+
+It provides a **static overview** of prominent contributors, setting the stage for deeper exploration using interactive tools.
 
 ---
 
-## 📌 Context Within the Project
+## 🔄 Related Analysis
 
-This visual complements the broader project goals by:
-- Providing a **static, high-level summary** of frequent contributors
-- Setting the stage for more advanced, interactive analyses
-- Supporting the case for examining **role-based responsibility** in film outcomes
+This chart is closely related to the interactive notebook found in:
 
-Together with the interactive exploration and cleaned datasets, this chart helps form a **data-driven narrative** about influence, accountability, and trends among IMDb's most poorly received titles.
+- `notebooks/interactive/top_culprits_interactive(1).ipynb`
+
+That notebook goes beyond frequency and uncovers contributors with high **weighted impact**, even if they are not among the most frequent names.
+
+Together, these analyses present a **multi-dimensional perspective** on influence and responsibility in low-rated film production.
 
 ---
