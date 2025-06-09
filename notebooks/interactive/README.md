@@ -18,7 +18,7 @@ To get the full interactive experience:
 2. Run all cells in Colab to enable the interactive widgets and visualizations.
 3. Enjoy exploring the data dynamically!
 
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Data-Matt0/imdb-lowest-rated-analysis/blob/main/notebooks/interactive/top_culprits_interactive.ipynb)
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Data-Matt0/imdb-lowest-rated-analysis/blob/main/notebooks/interactive/top_culprits_interactive(1).ipynb)
 
 
 ---
